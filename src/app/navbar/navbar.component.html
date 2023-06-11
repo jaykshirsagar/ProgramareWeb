@@ -1,0 +1,30 @@
+<p>
+  <mat-toolbar>
+    <button matTooltip="Go to Home page" mat-icon-button class="example-icon"
+      aria-label="Example icon-button with menu icon" routerLink="/home">
+      <mat-icon>home</mat-icon>
+    </button>
+    <span>Optics Shop</span>
+    <span class="example-spacer"></span>
+      <form class="example-form">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <input type="text" placeholder="Search" aria-label="Number" matInput [formControl]="myControl"
+            [matAutocomplete]="auto">
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOptions | async" (click)="accessItem(option.id)">
+              {{option.title}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </form>
+    <button mat-button routerLink="/products">
+      Product
+    </button>
+    <button mat-button routerLink="/cart">
+      Shopping
+    </button>
+    <button mat-button routerLink="/history">
+      History
+    </button>
+  </mat-toolbar>
+</p>

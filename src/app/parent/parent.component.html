@@ -1,0 +1,4 @@
+<p>parent works!</p>
+<p>response from child: "{{receivedFromChild}}"</p>
+<button (click)="sendMessageToChild('hello Child')">SendToChild</button>
+<app-child [receivedFromParent]="ToSentToParent" (messageToEmit)="getMessage($event)"></app-child>

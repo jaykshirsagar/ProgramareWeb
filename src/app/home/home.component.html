@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+<p [style.color]="color">{{title}}</p>
+
+
+<button mat-button type="submit" (click)="changeButton()" >Update button</button>
+
+
+<mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Email</mat-label>
+    <input required type="email" matInput placeholder="Email" value="" [(ngModel)]="newTitle">
+</mat-form-field>
+<button mat-button type="submit" [disabled]="buttonDisable" (click)="changeTitle()">{{newTitle}}</button>
+<app-parent></app-parent>

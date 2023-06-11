@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+<div class="card-wrapper">
+    <div  *ngFor="let product of productMap.keys()">
+        <mat-card class="card-wrapper" class="wholecard">
+            <div style="text-align:left; vertical-align: top;" class="halfcard">
+                <mat-card-title>{{product.title}}</mat-card-title>
+                <mat-card-content>
+                    Price Per item: {{product.price}}€
+                </mat-card-content>
+                <mat-card-content>
+                    Quantity:
+                    <form class="example-form">
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <input matInput oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" (input)="changeQuantity(product, $event)" value="{{productMap.get(product)}}">
+                        </mat-form-field>
+                    </form>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button (click)="removeItem(product)">Remove</button>
+                </mat-card-actions>
+            </div>
+            <div style="text-align:center" class="halfcard">
+                <img width="200" src="{{product.imagePath}}">
+            </div>
+        </mat-card>
+    </div>
+</div>
+<div class="price-info-bar">
+    <mat-toolbar>
+        <button (click)="placeOrder()" mat-raised-button color="primary">Place order</button>
+        <span class="price-info">Total: {{totalPrice}}€</span>
+    </mat-toolbar>
+</div>

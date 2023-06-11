@@ -1,0 +1,32 @@
+<div style="display: flex; justify-content: center;">
+    <form class="example-form" style="text-align:center; vertical-align:middle; margin-top: 8%;">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Title</mat-label>
+            <input [(ngModel)]="title" name="inputTitle" matInput placeholder="title">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Description</mat-label>
+            <textarea [(ngModel)]="description" name="inputDescription" matInput placeholder="description"></textarea>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Price</mat-label>
+            <input [(ngModel)]="price" name="inputTitle" matInput placeholder="price">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Photo path</mat-label>
+            <input [(ngModel)]="photoPath" name="inputPhoto" matInput placeholder="Photo path">
+        </mat-form-field>
+        
+        
+        <mat-form-field class="example-full-width" appearance="fill">
+        <mat-select placeholder="Category" [(ngModel)]="category" [ngModelOptions]="{standalone: true}">
+            <mat-option *ngFor="let cat of prodCategories" [value]="cat">{{cat}}</mat-option>
+        </mat-select>
+        </mat-form-field>
+
+        <button mat (click)="add()">Finish</button>
+    </form>
+</div>

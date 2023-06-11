@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+<div class="card-wrapper">
+    <div  *ngFor="let order of orders">
+        <mat-card class="card-wrapper" class="wholecard">
+            <div style="text-align:left; vertical-align: top;" class="halfcard">
+                <mat-card-title>{{order.date | slice:0:25}}</mat-card-title>
+                <mat-card-content style="white-space: pre">
+                    {{order.text}}
+                </mat-card-content>
+            </div> 
+        </mat-card>
+    </div>
+</div>

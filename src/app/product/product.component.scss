@@ -1,0 +1,75 @@
+.example-card {
+    max-width: 400px;
+    margin: 10px;
+  }
+
+.card-wrapper{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.price-and-add{
+  margin-left: 5px;
+}
+
+.price-slider{
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 190px;
+  display: flex;
+  flex-flow: column;
+}
+
+.product-photo{
+  margin: auto;
+}
+
+.divider{
+  margin-left: 60px;
+}
+
+.example-container {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  margin: 0px;
+  min-height: 85%;
+}
+
+.sidenav{
+  width: 225px;
+  font-size: large;
+}
+
+.sort-by-input{
+  margin: 15px;
+  width: 190px;
+}
+
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  align-items: flex-start;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+.addnew{
+  width: max-content;
+  max-height: 40px;
+  margin: 10px;
+}
+
+.paginator{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.bottomInvisible{
+  height: 50px;
+}

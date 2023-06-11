@@ -1,0 +1,20 @@
+<div class="container">
+
+    <form #login="ngForm" class="example-form" (ngSubmit) = "Submit(login)">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Email</mat-label>
+            <input required type="email" matInput placeholder="Email" value="" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" ngModel [ngModelOptions]="{standalone: true}" [(ngModel)]="email">
+        </mat-form-field>
+
+        <mat-form-field class="pass" appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" ngModel [ngModelOptions]="{standalone: true}" [(ngModel)]="password">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+        <br>
+    <button mat-button type="submit" (click)="onLogin()">Log in</button>
+    </form>
+
+</div>

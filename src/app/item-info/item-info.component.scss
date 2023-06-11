@@ -1,0 +1,40 @@
+.slideContainer{
+
+    text-align: center;
+    vertical-align: middle;
+    border: 0.1cm solid rgb(212, 212, 212);
+    min-width: 400px;
+    border-radius: 15px;
+    margin-left: 30px;
+}
+
+.slide{
+    vertical-align: middle;
+    width: 300px;
+}
+
+.leftArrow{
+    margin-right: 50px;
+    height: 60px;
+}
+
+.rightArrow{
+    margin-left: 50px;
+    height: 60px;
+}
+
+.rightDiv{
+    margin-left: 10px;
+    vertical-align: auto;
+    font-size: x-large;
+}
+
+.container{
+    margin-top: 40px;
+}
+
+.card-wrapper{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}    
