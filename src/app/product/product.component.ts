@@ -67,6 +67,7 @@ export class ProductComponent implements OnInit {
 
   recalculateResults(){
     this.resultCount = this.productService.countProductsOfCriteria(this.categoryDisplayed, this.minValue, this.maxValue);
+    
     this.productsOnDisplay = this.productService.getProducts(this.pageIndex * this.pageSize, (this.pageIndex + 1) * this.pageSize, this.categoryDisplayed,  this.minValue, this.maxValue, this.sortCriteriaID)
   }
 }
